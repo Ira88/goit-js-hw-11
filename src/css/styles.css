@@ -42,7 +42,7 @@ img {
 
   color: black;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1;
   text-align: center;
   font-weight: 500;
@@ -63,7 +63,7 @@ form {
 }
 
 .search-form {
-  background-color: rgb(63 86 177);
+  background-color: rgb(51 102 255);
 }
 
 .input {
@@ -92,7 +92,7 @@ button {
   width: 100px;
   height: 30px;
 
-  font-size: 16px;
+  font-size: 18px;
   background: rgb(192, 192, 192);
   border: none;
   position: relative;
