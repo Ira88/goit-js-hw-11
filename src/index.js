@@ -54,4 +54,4 @@ async function pixabay(name, page) {
     } catch (error){
         console.log(error);
     }
-}
+};
