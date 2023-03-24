@@ -17,6 +17,7 @@ function onSearch(evt) {
     page = 1;
     refs.gallery.innerHTML = '';
     const name = refs.input.value.trim();
+    // console.log('name');
     if (name !== ''){
         pixabay(name);
     } else {
@@ -25,12 +26,12 @@ function onSearch(evt) {
             'Sorry, there are no images matching your search query. Please try again.'
         );
     }
-}
+};
 function onBtnLoadMore(){
     const name = refs.input.value.trim();
     page += 1;
     pixabay(name, page);
-}
+};
 async function pixabay(name, page) {
     const API_URL = 'https://pixabay.com/api/';
     const options = {
@@ -44,14 +45,6 @@ async function pixabay(name, page) {
             per_page: 40,
         },
     };
-    try {
-        const response = await axios.get(API_URL, options);
-        notification(
-            response.data.hits.length,
-            response.data.total
-        );
-        createMarkup(response.data);
-    } catch (error){
-        console.log(error);
-    }
+    const {data} = await axios.get(API_URL, options);
+    return data;
 };
